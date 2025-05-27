@@ -160,14 +160,16 @@
       margin: 0;
     }
 
-    .gallery img {
+    .gallery img,
+    .gallery video {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
     }
 
-    .gallery img:hover {
+    .gallery img:hover,
+    .gallery video:hover {
       transform: scale(1.03);
     }
 
@@ -301,6 +303,7 @@
     <a href="#projects">Projects</a>
     <a href="#posters">Posters</a>
     <a href="#achievements">Achievements</a>
+    <a href="#interview">Interview</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -357,7 +360,6 @@
     <section id="posters" data-aos="fade-up">
       <h2>My Poster Work</h2>
       <div class="gallery">
-
         <img src="poster2.jpg" alt="Poster 2" loading="lazy" />
         <img src="poster3.jpg" alt="Poster 3" loading="lazy" />
         <img src="poster4.jpg" alt="Poster 4" loading="lazy" />
@@ -383,6 +385,22 @@
       </div>
     </section>
 
+    <!-- ✅ New Interview Section -->
+    <section id="interview" data-aos="fade-up">
+      <h2>Interview Videos</h2>
+      <p>Check out my on-screen interviews and speaking highlights below.</p>
+      <div class="gallery">
+        <video controls data-aos="zoom-in">
+          <source src="interview 1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video controls data-aos="zoom-in">
+          <source src="interview 2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
     <section id="contact" data-aos="fade-up">
       <h2>Contact Me</h2>
       <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
@@ -395,17 +413,6 @@
       </form>
     </section>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      once: true
-    });
-  </script>
-  </div>
-
-  <button id="scrollTopBtn" title="Go to top">↑</button>
-  <button class="dark-toggle" onclick="toggleDarkMode()">🌓 Toggle Mode</button>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -442,6 +449,9 @@
       });
     }
   </script>
+
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌓 Toggle Mode</button>
 </body>
 
 </html>
